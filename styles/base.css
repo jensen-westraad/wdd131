@@ -1,0 +1,149 @@
+:root {
+    --light-red: #f28b82;
+    --dark-gray: #444;
+    --gray: #ccc;
+    --white: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: var(--white);
+    color: #222;
+}
+
+/* HEADER */
+header {
+    background-color: var(--light-red);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.highlight {
+    color: #fffde7;
+    font-weight: bold;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: var(--dark-gray);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #e57373;
+    border-radius: 5px;
+}
+
+/* MAIN GRID */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* CARD SECTIONS */
+.card {
+    background: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    background-color: var(--light-red);
+    color: white;
+    padding: 0.5rem;
+    margin: -1rem -1rem 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.25rem;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card-content img {
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--gray);
+}
+
+/* COUNTRY CARD */
+.flag-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.flag-info img {
+    width: 90px;
+    height: auto;
+}
+
+.caption {
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.25rem;
+}
+
+/* RESOURCES LIST */
+.resources {
+    padding-left: 1rem;
+}
+
+.resources li {
+    margin-bottom: 0.5rem;
+}
+
+.resources a {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.85rem;
+}
+
+#lastModified {
+    color: #ffee58;
+}

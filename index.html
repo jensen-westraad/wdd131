@@ -1,12 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <meta name="description" content="Jensen Westraad Home Page for WDD 131, Dynamic Web Fundamentals">
+    <meta name="author" content="Jensen Westraad">
+    <title>WDD 131 – Dynamic Web Fundamentals – Jensen Westraad</title>
+
 </head>
+
 <body>
-    <h1>WDD 131 - Jensen Westraad</h1>
-    
+
+    <header>
+        <span id="course-title">WDD 131 - Jensen Westraad</span>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/jensen-westraad-831a98339/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a
+                        href="https://www.churchofjesuschrist.org/study/scriptures/ot/prov/25?lang=eng&id=p28#p28">Scripture</a>
+                </li>
+                <li><a href="#">Final Project</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="grid-layout">
+        <h1>Jensen Westraad</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="card-content">
+                <p>My name is Jensen Anthony Westraad. I was born in Cape Town, South Africa and have lived here my
+                    whole
+                    life of 20 years with my family and friends. I am currently only enrolled in BYU Idaho studying to
+                    become a Software Developer, but my passions and hobbies consist of music, photography and
+                    videography.
+                    I love
+                    to play video games, sing and play piano as well as spending time with my family and friends. </p>
+
+                <img src="images/profile 131.png" alt="Profile Picture">
+            </div>
+
+
+            <div class="card-country">
+                <h3>Cape Town, South Africa</h3>
+                <div class="flag-info">
+                    <div>
+                        <img src="south-africa-flag.jpeg" alt="Flag of SA" />
+                        <div class="caption">Official Flag of South Africa</div>
+                    </div>
+
+                    <p>
+                        MSouth Africa is one of the most biodiverse countries in the world: despite covering only
+                        around
+                        1% of the earth's land surface, it holds nearly 10% of the world’s bird, fish, and plant
+                        species, and about 6% of its mammal and reptile species .
+                    </p>
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+
+            <nav>
+                <ul class="resources">
+                    <li><a href="#">Example</a></li>
+                    <li><a href="#">Example</a></li>
+                    <li><a href="#">Example</a></li>
+                </ul>
+            </nav>
+
+
+
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Jensen Westraad, South Africa</p>
+        <p id="lastModified"></p>
+
+        <script>
+
+            document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+
+            document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+        </script>
+
+    </footer>
+
 </body>
+
 </html>
