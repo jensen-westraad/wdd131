@@ -21,8 +21,10 @@ header {
 }
 
 header h1 {
-    margin: 0;
-    font-size: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+    
+    margin: 1.5rem 0;
 }
 
 .course-title {
@@ -52,7 +54,7 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     padding: 0.3rem 0.6rem;
-    transition: background 0.3s;
+
 }
 
 nav a:hover {
@@ -61,21 +63,28 @@ nav a:hover {
 }
 
 /* MAIN GRID */
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    
+    margin: 1.5rem 0;
+
+
+}
 .grid-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+   padding: 20px;
 }
 
 /* CARD SECTIONS */
 .card {
     background: var(--white);
     border: 1px solid var(--gray);
-    border-radius: 8px;
-    padding: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -92,15 +101,48 @@ nav a:hover {
 
 .card-content {
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
     gap: 1rem;
 }
 
 .card-content img {
-    width: 100px;
-    height: auto;
+    width: 120px;
+    border-radius: 6px;
     border: 1px solid var(--gray);
 }
+
+.web-card {
+    background: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.web-card h2 {
+    background-color: var(--light-red);
+    color: white;
+    padding: 0.5rem;
+    margin: -1rem -1rem 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.25rem;
+}
+
+.web-card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.web-card-content img {
+    width: 120px;
+    border-radius: 6px;
+    border: 1px solid var(--gray);
+}
+
+
 
 /* COUNTRY CARD */
 .flag-info {
