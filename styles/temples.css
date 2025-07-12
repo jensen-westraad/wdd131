@@ -1,0 +1,55 @@
+:root {
+    --light-red: #f28b82;
+    --dark-gray: #444;
+    --gray: #ccc;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--light-red);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-color: red;
+}
+
+.hide {
+    display: none;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--light-red);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
