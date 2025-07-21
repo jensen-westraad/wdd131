@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Africa</title>
+    <meta name="description" content="page that holds data on my home country South Africa">
+    <meta name="author" content="Jensen Westraad">
+    <link rel="stylesheet" href="styles/place.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+</head>
+
+<body>
+    <main class="container">
+
+        <!-- MOBILE VIEW -->
+        <section class="mobile-view">
+            <header class="header">
+                <h1>South Africa</h1>
+            </header>
+
+            <img src="images\south-africa-travel-facts-banner.jpg" alt="Cape Town" class="main-image" />
+
+            <div class="card data-card">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 1,221,037 sq km</li>
+                    <li><strong>Population:</strong> 64,747,319</li>
+                    <li><strong>Capital:</strong> Cape Town, Pretoria and Bloemfontein</li>
+                    <li><strong>Languages:</strong> Afrikaans, English, isiNdebele, isiXhosa, isiZulu, Sesotho,
+                        Setswana, siSwati, Tshivenda, Xitsonga, Sepedi</li>
+                    <li><strong>Currency:</strong> South African Rand</li>
+                    <li><strong>Time Zone:</strong> UTC+2</li>
+                    <li><strong>Calling Code:</strong> +27</li>
+                    <li><strong>Internet TLD:</strong> .co.za</li>
+                </ul>
+            </div>
+
+            <div class="card weather-card">
+                <h2>Weather</h2>
+                <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="Partly Cloudy"
+                    class="weather-icon" />
+                <ul>
+                    <li><strong>Temperature:</strong> 13°C</li>
+                    <li><strong>Conditions:</strong>Cloudy</li>
+                    <li><strong>Wind:</strong> 9S km/h</li>
+                    <li><strong>Wind Chill:</strong> <span class="wind-chill">N/A</span></li>
+
+                </ul>
+            </div>
+
+            <footer>
+                <p>&copy;2025 Jensen Westraad 🌐<br>
+                    South Africa<br></p>
+                <p>Last Modification:<span id="modification-mobile"></span>
+                </p>
+
+            </footer>
+        </section>
+
+        <!-- WIDE VIEW -->
+        <section class="wide-view">
+            <header class="header">
+                <h1>South Africa</h1>
+            </header>
+
+            <div class="wide-wrapper">
+                <img src="images\south-africa-travel-facts-banner.jpg" alt="Cape Town" class="wide-image" />
+
+                <div class="overlay-box data-overlay">
+                    <h3>Data 📊</h3>
+                    <ul>
+                        <li>Area: 1,221,037 sq km</li>
+                        <li>Population: 64,747,319</li>
+                        <li>Capital: Cape Town, Pretoria and Bloemfontein</li>
+                        <li>Languages: Afrikaans, English, isiNdebele, isiXhosa, isiZulu, Sesotho, Setswana, siSwati,
+                            Tshivenda, Xitsonga, Sepedi</li>
+                        <li>Currency: South African Rand</li>
+                        <li>Time Zone: UTC+2</li>
+                        <li>Calling Code: +27</li>
+                        <li>Internet TLD: .co.za</li>
+                    </ul>
+                </div>
+
+                <div class="overlay-box weather-overlay">
+                    <h3>Weather ⛅</h3>
+                    <ul>
+                        <li>Temperature: 13°C</li>
+                        <li>Conditions: Cloudy</li>
+                        <li>Wind: 9 km/h</li>
+                        <li><strong>Wind Chill:</strong> <span class="wind-chill">N/A</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <footer>
+                <p>&copy;2025 Jensen Westraad 🌐<br>
+                    South Africa<br></p>
+                <p>Last Modification:<span id="modification-wide"></span>
+                </p>
+
+            </footer>
+        </section>
+
+    </main>
+    <script defer src="place.js"></script>
+</body>
+
+</html>

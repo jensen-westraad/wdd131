@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-red: #f28b82;
+    --dark-gray: #444;
+    --gray: #ccc;
+    --white: #fff;
+    --creme: #fffff0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--creme);
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background: var(--light-red);
+    color: var(--white);
+    text-align: center;
+    padding: 12px;
+    font-size: 1.5em;
+}
+
+.main-image,
+.wide-image {
+    width: 100%;
+    display: block;
+}
+
+.card {
+    background: var(--white);
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    line-height: 1.6;
+    padding: 0;
+}
+
+.weather-icon {
+    width: 50px;
+    margin: 10px 0;
+}
+
+footer {
+    background: var(--light-red);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    font-size: 0.85em;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.wide-view {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile-view {
+        display: none;
+    }
+
+    .wide-view {
+        display: block;
+    }
+
+    .wide-wrapper {
+        position: relative;
+    }
+
+    .wide-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay-box {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 0.9em;
+    }
+
+    .data-overlay {
+        top: 15%;
+        left: 5%;
+        text-align: left;
+    }
+
+    .weather-overlay {
+        bottom: 15%;
+        right: 5%;
+        text-align: left;
+    }
+
+    .overlay-box h3 {
+        margin-bottom: 6px;
+    }
+}
