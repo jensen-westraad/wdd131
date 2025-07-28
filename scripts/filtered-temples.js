@@ -3,25 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const footer = document.querySelector("footer");
   const year = new Date().getFullYear();
-  const copyrightText = `©${year} 🎞️ Jensen Anthony Westraad 🎞️ South Africa`;
-  footer.querySelector("p").innerHTML = copyrightText;
-
-
-  const lastModified = document.getElementById("lastModified");
-  if (lastModified) {
-    lastModified.textContent = document.lastModified;
-  }
+  footer.querySelector("p").innerHTML = `©${year} 🎞️ Jensen Anthony Westraad 🎞️ South Africa`;
+  document.getElementById("lastModified").textContent = document.lastModified;
 
 
   const menuButton = document.getElementById("menu-toggle");
   const navMenu = document.getElementById("main-nav");
-
   menuButton.addEventListener("click", () => {
     navMenu.classList.toggle("hide");
-
-    // Toggle icon between ☰ and ✖
     menuButton.textContent = navMenu.classList.contains("hide") ? "☰" : "✖";
   });
+
 
   const temples = [
     {
@@ -85,26 +77,71 @@ document.addEventListener("DOMContentLoaded", () => {
       location: "Durban South Africa",
       dedicated: "2020, February, 16",
       area: 19860,
-      imageUrl:
-        "https://churchofjesuschristtemples.org/assets/img/temples/durban-south-africa-temple/durban-south-africa-temple-35783-thumb.jpg"
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/durban-south-africa-temple/durban-south-africa-temple-35783-thumb.jpg"
     },
     {
       templeName: "Johannesburg South Africa",
       location: "Johannesburg South Africa",
       dedicated: "1985, August, 25",
       area: 19184,
-      imageUrl:
-        "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
     },
     {
       templeName: "Panama City Panama",
       location: "Panama City Panama",
       dedicated: "2008, August, 10",
       area: 18943,
-      imageUrl:
-        "https://churchofjesuschristtemples.org/assets/img/temples/_temp/127-Panama-City-Panama-Temple.jpg"
+      imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/127-Panama-City-Panama-Temple.jpg"
     },
+
   ];
 
 
+
+  const gallery = document.querySelector(".gallery");
+
+  function displayTemples(filteredTemples) {
+    gallery.innerHTML = "";
+    filteredTemples.forEach(t => {
+      const card = document.createElement("div");
+      card.classList.add("temple-card");
+      card.innerHTML = `
+        <h3>${t.templeName}</h3>
+        <p><strong>Location:</strong> ${t.location}</p>
+        <p><strong>Dedicated:</strong> ${t.dedicated}</p>
+        <p><strong>Size:</strong> ${t.area.toLocaleString()} sq ft</p>
+        <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
+      `;
+      gallery.appendChild(card);
+    });
+  }
+
+  function filterTemples(criteria) {
+    let filtered = temples;
+
+    if (criteria === "old") {
+      filtered = temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
+    } else if (criteria === "new") {
+      filtered = temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
+    } else if (criteria === "large") {
+      filtered = temples.filter(t => t.area > 90000);
+    } else if (criteria === "small") {
+      filtered = temples.filter(t => t.area < 10000);
+    }
+
+    displayTemples(filtered);
+  }
+
+
+  displayTemples(temples);
+
+
+  document.querySelectorAll("#main-nav a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const criteria = link.textContent.toLowerCase();
+      filterTemples(criteria);
+      document.querySelector("main h2").textContent = link.textContent;
+    });
+  });
 });
