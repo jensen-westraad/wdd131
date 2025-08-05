@@ -50,9 +50,6 @@ label {
     padding: 1rem;
 }
 
-.date {
-    padding: 1rem;
-}
 
 .features {
     padding: 1rem;
@@ -66,15 +63,9 @@ label {
 
 }
 
-.review {
-    padding: 1rem;
-}
 
-.name {
-    padding: 1rem;
-}
 
-.button{
+.button {
     padding: 1rem;
     display: flex;
     justify-content: space-evenly;
@@ -82,7 +73,7 @@ label {
 }
 
 h2 {
-    padding: 1rem;
+    font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
