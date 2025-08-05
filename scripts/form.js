@@ -49,4 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
             averagerating: 5.0
         }
     ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const select = document.getElementById("product");
+
+        products.forEach(product => {
+            const option = document.createElement("option");
+            option.value = product.id;
+            option.textContent = product.name;
+            select.appendChild(option);
+        });
+    });
+
 });
