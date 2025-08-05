@@ -1,4 +1,3 @@
-console.log("✅ form.js loaded");
 
 document.addEventListener("DOMContentLoaded", () => {
     const products = [
@@ -11,11 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const select = document.getElementById("product");
 
-    if (!select) {
-        console.error("❌ Could not find <select id='product'> element.");
-        return;
-    }
-
     products.forEach(product => {
         const option = document.createElement("option");
         option.value = product.id;
@@ -23,11 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
         select.appendChild(option);
     });
 
-    // ✅ Only update lastModified if the element exists
+
     const modifiedSpan = document.getElementById("lastModified");
     if (modifiedSpan) {
         modifiedSpan.textContent = document.lastModified;
     }
 
-    console.log("✅ Dropdown populated and lastModified updated.");
+
 });
