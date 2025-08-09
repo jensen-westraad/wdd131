@@ -1,0 +1,50 @@
+:root {
+    --light-green: #E4FDE1;
+    --lime-green: #8ACB88;
+    --dark-green: #648381;
+    --white: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: var(--white);
+    color: #222;
+}
+
+/* HEADER */
+header {
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+
+    margin: 1.5rem 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--dark-green);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.85rem;
+}
+
+
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.libertinus-serif-regular {
+    font-family: "Libertinus Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
